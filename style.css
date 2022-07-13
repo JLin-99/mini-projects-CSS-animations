@@ -76,3 +76,27 @@ body {
   background-color: var(--light-color);
   color: var(--dark-color);
 }
+
+/* Page Animation */
+#page-1 h1 {
+  transform: translateY(-100vh);
+  animation: heading var(--animation-speed) forwards;
+}
+
+#page-1 p {
+  transform: translateX(-100vw);
+  animation: paragraph var(--animation-speed) forwards 1s;
+}
+
+/* Keyframes */
+@keyframes heading {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes paragraph {
+  to {
+    transform: translateX(0);
+  }
+}

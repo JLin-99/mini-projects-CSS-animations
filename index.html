@@ -15,9 +15,8 @@
   <section id="page-1" class="page">
     <h1>Welcome To My Presentation</h1>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem optio delectus minus voluptates dicta facere
-      commodi at dolores dolor, atque veritatis nam ea a animi non, iusto ipsum maiores! Sapiente hic unde dolorum
-      pariatur ex quidem mollitia omnis eaque facere?</p>
+      This is a simplify presentation website boilerplate, for building something custom if you don't want to use
+      PowerPoint or other presentation tools.</p>
     <div>
       <a href="#page-2" class="btn">
         Next Page <i class="fas fa-arrow-circle-down"></i>
@@ -72,6 +71,24 @@
       </a>
     </div>
   </section>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    // Smooth Scrolling
+    $(".btn").on("click", function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        const hash = this.hash;
+        $("html, body").animate(
+          {
+            scrollTop: $(hash).offset().top
+          },
+          800
+        );
+      }
+    })
+  </script>
 </body>
 
 </html>
