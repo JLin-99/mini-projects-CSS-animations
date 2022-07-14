@@ -1,0 +1,114 @@
+:root {
+  --primary-color: coral;
+  --secondary-color: chocolate;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: #f4f4f4;
+  font-family: monospace;
+}
+
+#navbar ul {
+  list-style: none;
+}
+
+#navbar ul li {
+  color: #333;
+  display: inline-block;
+  padding: 1em;
+  position: relative;
+  cursor: pointer;
+}
+
+#navbar ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Hide nested ul by default */
+#navbar ul li ul {
+  display: none;
+}
+
+#navbar ul li:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+#navbar ul li:hover a {
+  color: #fff;
+}
+
+/* Nested dropdown show */
+#navbar ul li:hover ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 20rem;
+  margin-top: 1em;
+}
+
+#navbar ul li:hover ul li {
+  display: block;
+  background-color: #e7e7e7;
+}
+
+#navbar ul li:hover ul li a {
+  color: #333;
+}
+
+#navbar ul li:hover ul li:hover {
+  background-color: #e0e0e0;
+}
+
+#navbar ul li:hover ul li span {
+  float: right;
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 0.2em 0.5em;
+  text-align: center;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+}
+
+#navbar ul li:hover ul li:hover span {
+  background-color: var(--secondary-color);
+}
+
+#showcase {
+  display: flex;
+  flex-direction: column;
+  height: 50vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 2em;
+  background-color: coral;
+}
+
+#showcase h1 {
+  color: #fff;
+  font-size: 6.4rem;
+}
+
+@media(max-width: 600px) {
+  #navbar ul li {
+    display: block;
+  }
+
+  #navbar ul li:hover ul {
+    width: 100%;
+    position: relative;
+  }
+}
