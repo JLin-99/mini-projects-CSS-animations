@@ -15,12 +15,13 @@ html {
 
 body {
   font-size: 1.6rem;
-  background-color: #f4f4f4;
+  background-color: coral;
   font-family: monospace;
 }
 
 #navbar ul {
   list-style: none;
+  background-color: #f4f4f4;
 }
 
 #navbar ul li {
@@ -94,7 +95,6 @@ body {
   justify-content: center;
   text-align: center;
   padding: 0 2em;
-  background-color: coral;
 }
 
 #showcase h1 {
